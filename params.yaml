@@ -1,0 +1,7 @@
+XGBClassifier: 
+  n_estimators: 1 
+  max_depth: 10
+  min_samples_split: 100
+  min_samples_leaf: 2
+  max_features: 2
+  class_weight: 2

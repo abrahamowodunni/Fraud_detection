@@ -1,0 +1,17 @@
+COLUMNS:
+  merchant:  object 
+  category: object 
+  amt: float64
+  lat: float64
+  long: float64
+  city_pop: int64  
+  job: object 
+  unix_time: int64  
+  merch_lat:  float64
+  merch_long: float64
+  trans_hour: int32  
+  trans_day: int32  
+  trans_month: int32
+
+TARGET_COLUMN:
+  name: is_fraud
