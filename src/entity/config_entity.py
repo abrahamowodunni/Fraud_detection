@@ -17,6 +17,7 @@ class DataValidationConfig:
     unzip_data_dir: Path
     all_schema: dict
 
+### I have to make changes here. 
 @dataclass(frozen=True)
 class DataTransformationConfig:
     root_dir: Path
@@ -26,6 +27,8 @@ class DataTransformationConfig:
     labels: list
     target_column: str
 
+
+# I have to make changes here to match the right parameters. 
 @dataclass(frozen=True)
 class ModelTrainerConfig:
     root_dir: Path
