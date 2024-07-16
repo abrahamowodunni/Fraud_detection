@@ -18,8 +18,8 @@ data_transformation:
   root_dir: artifacts/data_transformation
   data_path: artifacts/data_ingestion/fraudTrain.csv
   test_size: 0.2
-  bins: [0, 4, 6, 10]
-  labels: ['low', 'medium', 'high']
+  # bins: [0, 4, 6, 10]
+  # labels: ['low', 'medium', 'high']
 
 model_trainer:
   root_dir: artifacts/model_trainer

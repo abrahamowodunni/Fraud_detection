@@ -23,8 +23,8 @@ class DataTransformationConfig:
     root_dir: Path
     data_path: Path
     test_size: float
-    bins: list
-    labels: list
+    # bins: list
+    # labels: list
     target_column: str
 
 
