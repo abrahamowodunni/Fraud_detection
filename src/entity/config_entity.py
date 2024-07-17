@@ -23,8 +23,6 @@ class DataTransformationConfig:
     root_dir: Path
     data_path: Path
     test_size: float
-    # bins: list
-    # labels: list
     target_column: str
 
 
@@ -34,9 +32,10 @@ class ModelTrainerConfig:
     root_dir: Path
     train_data_path: Path
     test_data_path: Path
+    learning_rate: float
+    n_estimators: int
+    max_depth: int
     model_name: str
-    C: int
-    solver: str
     target_column: str
 
 @dataclass(frozen=True)

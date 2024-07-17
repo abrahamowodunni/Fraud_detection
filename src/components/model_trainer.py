@@ -2,8 +2,8 @@ import pandas as pd
 import os
 from src import logger
 from src.entity.config_entity import ModelTrainerConfig
-from sklearn.linear_model import LogisticRegression
-from sklearn.preprocessing import OrdinalEncoder
+import xgboost as xgb
+# from sklearn.preprocessing import OrdinalEncoder
 import joblib
 
 class ModelTrainer:
@@ -20,7 +20,9 @@ class ModelTrainer:
         test_y = test_data[self.config.target_column]
 
         ## I need to make changes here. 
-        lr = LogisticRegression(C=self.config.C,solver=self.config.solver, random_state=42)
-        lr.fit(train_x, train_y)
+        xgb_clf = xgb.XGBClassifier(learning_rate=self.config.learning_rate,
+                                    n_estimators=self.config.n_estimators,
+                                    max_depth=self.config.max_depth)
+        xgb_clf.fit(train_x, train_y)
 
-        joblib.dump(lr, os.path.join(self.config.root_dir, self.config.model_name))
+        joblib.dump(xgb_clf, os.path.join(self.config.root_dir, self.config.model_name))
