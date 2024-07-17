@@ -1,0 +1,5 @@
+{
+    "precision_fraud": 0.9,
+    "recall_fraud": 0.86,
+    "f1_fraud": 0.88
+}

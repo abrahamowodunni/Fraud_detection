@@ -3,7 +3,7 @@ artifacts_root: artifacts
 
 data_ingestion:
   root_dir: artifacts/data_ingestion
-  source_URL: https://github.com/abrahamowodunni/DATA/blob/master/fraudTrain.zip
+  source_URL: https://github.com/abrahamowodunni/DATA_FRAUD/raw/Main/fraudTrain.zip
   local_data_file: artifacts/data_ingestion/data.zip
   unzip_dir: artifacts/data_ingestion
 
@@ -18,8 +18,6 @@ data_transformation:
   root_dir: artifacts/data_transformation
   data_path: artifacts/data_ingestion/fraudTrain.csv
   test_size: 0.2
-  # bins: [0, 4, 6, 10]
-  # labels: ['low', 'medium', 'high']
 
 model_trainer:
   root_dir: artifacts/model_trainer
@@ -35,3 +33,4 @@ model_evaluation:
   optimal_metric_file_name: artifacts/model_evaluation/optimal_metrics.json  
   fraud_metric_file_name: artifacts/model_evaluation/fraud_metrics.json  
   roc_curve_file_name: artifacts/model_evaluation/roc_curve.png  
+  

@@ -3,8 +3,10 @@ import os
 from src import logger
 from src.entity.config_entity import ModelTrainerConfig
 import xgboost as xgb
-# from sklearn.preprocessing import OrdinalEncoder
+from sklearn.model_selection import cross_val_predict
 import joblib
+from sklearn.metrics import classification_report, roc_curve, auc
+import matplotlib.pyplot as plt
 
 class ModelTrainer:
     def __init__(self, config: ModelTrainerConfig):
@@ -23,6 +25,9 @@ class ModelTrainer:
         xgb_clf = xgb.XGBClassifier(learning_rate=self.config.learning_rate,
                                     n_estimators=self.config.n_estimators,
                                     max_depth=self.config.max_depth)
+        
+        
         xgb_clf.fit(train_x, train_y)
+        
 
         joblib.dump(xgb_clf, os.path.join(self.config.root_dir, self.config.model_name))
