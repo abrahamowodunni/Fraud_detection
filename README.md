@@ -1,4 +1,6 @@
-# ![Fraud Detection](https://i.pinimg.com/564x/de/9c/f3/de9cf3532a1811d8818c59cd67fd6a63.jpg) Fraud Detection Project 🕵️‍♂️💳
+# ![Fraud Detection](https://i.pinimg.com/564x/b7/8a/58/b78a586554f8319fd9f231cea146261c.jpg)
+
+# Fraud Detection Project 🕵️‍♂️💳
 
 ## Overview
 This project aims to detect fraud in financial transactions using machine learning techniques to enhance security and reduce risks. The project covers fraud analytics, credit risk analysis, market services, and consumer services.
